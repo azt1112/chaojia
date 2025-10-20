@@ -1,21 +1,35 @@
 {
   "pages": {
-    "/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/layout.css",
-      "static/chunks/app/layout.js"
+    "/_not-found/page": [
+      "static/chunks/webpack-6460de51183d2dc7.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-cf2e1d3491ac955b.js",
+      "static/chunks/main-app-6dd2d5a48fa15e59.js",
+      "static/chunks/app/_not-found/page-7ad0b85197e68a19.js"
     ],
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/page.css",
-      "static/chunks/app/page.js"
+    "/layout": [
+      "static/chunks/webpack-6460de51183d2dc7.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-cf2e1d3491ac955b.js",
+      "static/chunks/main-app-6dd2d5a48fa15e59.js",
+      "static/css/816f765db71f19b6.css",
+      "static/css/0d53f09635f77dcf.css",
+      "static/chunks/app/layout-e5021432f8d9bf59.js"
     ],
     "/api/argue/route": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/api/argue/route.js"
+      "static/chunks/webpack-6460de51183d2dc7.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-cf2e1d3491ac955b.js",
+      "static/chunks/main-app-6dd2d5a48fa15e59.js",
+      "static/chunks/app/api/argue/route-65e4079dbb1a3c9a.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-6460de51183d2dc7.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-cf2e1d3491ac955b.js",
+      "static/chunks/main-app-6dd2d5a48fa15e59.js",
+      "static/css/783b1caeb95ebaf3.css",
+      "static/chunks/app/page-ef3b2b3dbb7b5037.js"
     ]
   }
 }

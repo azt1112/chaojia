@@ -160,7 +160,10 @@ export default function HomePage() {
       if (buffer.trim().length > 0) {
         processLine(buffer);
       }
-      if (!finalReplies || finalReplies.length === 0) {
+      if (!Array.isArray(finalReplies)) {
+        throw new Error("生成失败，请稍后再试。");
+      }
+      if (finalReplies.length === 0) {
         throw new Error("生成失败，请稍后再试。");
       }
     } catch (streamError) {
