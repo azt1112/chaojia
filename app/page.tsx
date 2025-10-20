@@ -160,10 +160,11 @@ export default function HomePage() {
       if (buffer.trim().length > 0) {
         processLine(buffer);
       }
-      if (!Array.isArray(finalReplies)) {
+      if (finalReplies == null) {
         throw new Error("生成失败，请稍后再试。");
       }
-      if (finalReplies.length === 0) {
+      const replies = finalReplies as Reply[];
+      if (replies.length === 0) {
         throw new Error("生成失败，请稍后再试。");
       }
     } catch (streamError) {
@@ -398,13 +399,16 @@ function normalizeErrorMessage(problem: { error?: unknown } | null | undefined) 
 }
 
 function normalizeReplyPayload(candidate: unknown[]) {
-  return candidate
-    .filter((reply) => typeof reply === "string" && reply.trim().length > 0)
-    .slice(0, 3)
-    .map((reply, idx) => ({
-      id: idx + 1,
-      text: reply.trim()
-    }));
+  const strings = candidate
+    .filter((reply): reply is string => typeof reply === "string")
+    .map((reply) => reply.trim())
+    .filter((reply) => reply.length > 0)
+    .slice(0, 3);
+
+  return strings.map((reply, idx) => ({
+    id: idx + 1,
+    text: reply
+  }));
 }
 
 function transformServerMessage(raw: string) {
